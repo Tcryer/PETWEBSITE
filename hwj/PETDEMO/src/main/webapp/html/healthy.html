@@ -18,7 +18,7 @@
             <div class="wrapper">
                 <!-- logo -->
                 <div class="logo">
-                    <img src="/images/navigation/bianzu.png" alt="">
+                    <img src="D:\animalpro\pet-healthy\images\navigation\编组.png" alt="">
                     <h1>Pet Healthy</h1>
                 </div>
                 <!-- 导航 -->
@@ -26,6 +26,7 @@
                     <ul>
                         <li><a href="">首页</a></li>
                         <li><a href="">百科</a></li>
+                        <li><a href="">社区</a></li>
                         <li><a href="../html/index.html" class="active">健康管理</a></li>
                         <li><a href="../html/pet-adoption.html">爱心收养</a></li>
                     </ul>
@@ -43,12 +44,7 @@
                                     主页
                                 </a>
                             </li>
-                            <li>
-                                <a href="../html/healthy.html" class="box">
-                                    <span class="iconfont icon-chongwudangan"></span>
-                                    健康档案
-                                </a>
-                            </li>
+
                             <li>
                                 <a href="../html/online consultation.html">
                                     <span class="iconfont icon-chongwuwenzhen"></span>
@@ -77,8 +73,13 @@
                     </div>
 
                     <!-- 体重变化图 -->
-                    <div class="weight-container">
-
+                    <div class="pet-section">
+                        <div class="chart-container">
+                            <h2>宠物体重变化图</h2>
+                            <label for="date-picker">选择日期：</label>
+                            <input type="date" id="date-picker">
+                            <canvas id="weight-chart"></canvas>
+                        </div>
                     </div>
 
 
@@ -92,7 +93,8 @@
     </div>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
+    <script src="../js/weight-chart.js"></script>
 </body>
 
 </html>
