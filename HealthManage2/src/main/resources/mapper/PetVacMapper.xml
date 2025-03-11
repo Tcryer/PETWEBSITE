@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zqh.mapper.PetVacMapper">
+    <select id="selectByPetId" resultType="com.zqh.pojo.PetVac">
+        select * from pet_vac where pet_id = #{pet_id}
+    </select>
+
+    <insert id="insert" parameterType="com.zqh.pojo.PetVac">
+        insert into pet_vac (pet_id, vac_name, vac_date, vac_status)
+        values (#{petId},#{vacName},#{vacDate},#{vacStatus})
+    </insert>
+
+    <update id="update" parameterType="com.zqh.pojo.PetVac">
+        update pet_vac set
+        vac_name = #{vacName}
+        vac_date = #{vacDate}
+        vac_status = #{vacStatus}
+        where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from pet_vac where id = #{id}
+    </delete>
+
+</mapper>
