@@ -1,4 +1,4 @@
-package com.zqh.web;
+package com.zqh.web;   //宠物信息的查看详情
 
 import com.zqh.pojo.PetInfo;
 import com.zqh.pojo.PetVac;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zqh.mapper.ConsultationMapper">
+    <insert id="insert" parameterType="com.zqh.pojo.Consultation">
+        insert into consultation (doctor_id, pet_name, pet_age, symptoms)
+        values (#{doctorId}, #{petName}, #{petAge}, #{symptoms})
+    </insert>
+</mapper>
