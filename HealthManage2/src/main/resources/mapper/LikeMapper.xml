@@ -9,8 +9,8 @@
     </select>
 
     <insert id="insertLike" parameterType="com.zqh.pojo.LikeRecord">
-        insert into like_record (doctor_id , user_ip)
-        values (#{doctorId}, #{userIp})
+        insert into like_record (doctor_id , user_ip, created_time)
+        values (#{doctorId}, #{userIp}, NOW())
     </insert>
 
     <delete id="deleteLike">

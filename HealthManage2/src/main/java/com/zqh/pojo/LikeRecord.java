@@ -8,6 +8,14 @@ public class LikeRecord {
     private String userIp;
     private Date createdTime;
 
+    //全参构造函数
+    public  LikeRecord(Integer id, Integer doctorId, String userIp, Date createdTime){
+        this.id = id;
+        this.doctorId = doctorId;
+        this.userIp = userIp;
+        this.createdTime = createdTime;
+    }
+
     public Integer getId() {
         return id;
     }

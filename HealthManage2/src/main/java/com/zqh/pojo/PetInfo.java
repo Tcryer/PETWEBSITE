@@ -1,17 +1,17 @@
-package com.zqh.pojo;
+package com.zqh.pojo; //宠物详细信息实体类
 
 import java.util.List;
 
 public class PetInfo {
     protected Integer id;
-    protected Integer petAge;
-    protected String petName;
-    protected String petVarious;
-    protected String petBirthday;
-    protected String petHealth;
-    protected String petSex;
+    protected Integer petAge;  //宠物年龄
+    protected String petName;  //宠物名字
+    protected String petVarious;  //宠物品种
+    protected String petBirthday;  //宠物生日
+    protected String petHealth;  //宠物健康状况
+    protected String petSex;  //宠物性别
 
-    private List<PetVac> petVacs;
+    private List<PetVac> petVacs;  //疫苗记录
     public Integer getId() {
         return id;
     }

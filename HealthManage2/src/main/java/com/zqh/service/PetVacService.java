@@ -9,6 +9,13 @@ import org.apache.ibatis.session.SqlSessionFactory;
 public class PetVacService {
     private SqlSessionFactory sqlSessionFactory = MyBatisUtil.getSqlSessionFactory();
 
+    //查看疫苗信息方法
+    public void selectVac(Integer pet_id){
+        try(SqlSession session = sqlSessionFactory.openSession(true)){
+            PetVacMapper petVacMapper = session.getMapper(PetVacMapper.class);
+            petVacMapper.selectByPetId(pet_id);
+        }
+    }
     //添加疫苗信息方法
     public void addVac(PetVac petVac){
         try(SqlSession session = sqlSessionFactory.openSession(true)){

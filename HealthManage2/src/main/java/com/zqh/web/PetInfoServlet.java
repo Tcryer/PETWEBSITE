@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/InfoSelect")
+@WebServlet("/pet/detail")
 public class PetInfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws SecurityException, IOException{
         Integer InfoId = Integer.parseInt(request.getParameter("id"));

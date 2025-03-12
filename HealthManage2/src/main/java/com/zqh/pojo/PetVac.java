@@ -5,9 +5,9 @@ import java.util.Date;
 public class PetVac {
     protected Integer id;
     protected Integer petId;
-    protected String vacName;
-    protected Date vacDate;
-    protected Boolean vacStatus;
+    protected String vacName; //疫苗名称
+    protected Date vacDate;//计划接种日期
+    protected Boolean vacStatus;//接种状态
 
     public Integer getId() {
         return id;

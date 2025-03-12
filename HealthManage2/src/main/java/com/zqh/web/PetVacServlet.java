@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@WebServlet("/VacServlet")
+@WebServlet("/vaccination/*")
 public class PetVacServlet extends HttpServlet {
     //处理添加疫苗信息
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws SecurityException, IOException{
