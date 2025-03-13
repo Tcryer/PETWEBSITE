@@ -17,7 +17,7 @@ public class WeightRecordService {
         try (SqlSession session = sqlSessionFactory.openSession()){
             WeightRecordMapper mapper = session.getMapper(WeightRecordMapper.class);
             return mapper.selectByPetId(petId);
-        }
+        he
     }
 
     //添加体重记录

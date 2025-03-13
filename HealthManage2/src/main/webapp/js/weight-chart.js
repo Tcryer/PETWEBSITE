@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
           },
           y: {
             title: { display: true, text: '体重 (kg)' },
-            min: Math.floor(Math.min(...weightData.map(d => d.weight)) - 1,
-                max: Math.ceil(Math.max(...weightData.map(d => d.weight)) + 1
-  }
+                min: Math.floor(Math.min(...weightData.map(d => d.weight)) - 1),
+                max: Math.ceil(Math.max(...weightData.map(d => d.weight)) + 1)
+            }
   }
   }
   });
