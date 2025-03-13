@@ -71,14 +71,47 @@
 
                     </div>
 
-                    <!-- 体重变化图 -->
-                    <div class="pet-section">
-                        <div class="chart-container">
-                            <h2>宠物体重变化图</h2>
-                            <label for="date-picker">选择日期：</label>
-                            <input type="date" id="date-picker">
-                            <canvas id="weight-chart"></canvas>
+                    <!-- 体重变化图 与疫苗提醒并排-->
+                    <div class="pet-details-row row mt-3">
+                        <div class="col-12 col-lg-6">
+                            <div class="chart-container">
+                                <h2>宠物体重变化图</h2>
+                                <label for="date-picker">选择日期：</label>
+                                <input type="date" id="date-picker">
+                                <canvas id="weight-chart"></canvas>
+                            </div>
                         </div>
+
+                        <div class="col-12 col-lg-6">
+                            <div class="vaccine">
+                                <h2>疫苗接种记录</h2>
+                                <button id="addVaccineBtn" class="btn btn-success" style="margin: 10px;">
+                                    <span class="iconfont icon-chongwushouye"></span> 新增接种记录
+                                </button>
+
+                                <!-- 新增：隐藏的表单（默认display:none），用于填写疫苗信息 -->
+                                <form id="vaccineForm" style="display: none; padding: 15px;">
+                                    <div class="mb-3">
+                                        <label for="vaccineName" class="form-label">疫苗名字：</label>
+                                        <input type="text" class="form-control" id="vaccineName" placeholder="如：二联疫苗">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="vaccineType" class="form-label">疫苗种类：</label>
+                                        <input type="text" class="form-control" id="vaccineType" placeholder="如：狂犬疫苗">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="vaccineDate" class="form-label">接种日期：</label>
+                                        <input type="date" class="form-control" id="vaccineDate">
+                                    </div>
+                                    <button type="button" id="saveVaccineBtn" class="btn btn-primary">添加</button>
+                                    <div id="vaccineList" style="padding: 10px;">
+                                        <!-- 这里会动态生成疫苗记录 -->
+                                    </div>
+
+
+                            </div>
+                        </div>
+
                     </div>
 
 
@@ -92,6 +125,7 @@
     </div>
 
     </div>
+    <script src="../js/vaccine.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
     <script src="../js/weight-chart.js"></script>
 </body>
