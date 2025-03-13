@@ -9,6 +9,15 @@ public class PetVac {
     protected Date vacDate;//计划接种日期
     protected Boolean vacStatus;//接种状态
 
+    public PetVac(){}
+    public PetVac(Integer id, Integer petId, String vacName, Date vacDate, Boolean vacStatus){
+        this.id = id;
+        this.petId = petId;
+        this.vacName = vacName;
+        this.vacDate = vacDate;
+        this.vacStatus = vacStatus;
+    }
+
     public Integer getId() {
         return id;
     }

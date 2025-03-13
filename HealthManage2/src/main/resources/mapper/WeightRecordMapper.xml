@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zqh.mapper.WeightRecordMapper">
+    <!-- 查询体重记录 -->
+    <select id="selectByPetId" resultType="com.zqh.pojo.WeightRecord">
+        SELECT
+            id,
+            pet_id as petId,
+            record_date as recordDate,
+            weight
+        FROM weight_record
+        WHERE pet_id = #{petId}
+        ORDER BY record_date ASC
+    </select>
+
+    <!-- 插入记录 -->
+    <insert id="insert" parameterType="com.zqh.pojo.WeightRecord">
+        INSERT INTO weight_record (pet_id, record_date, weight)
+        VALUES (#{petId}, #{recordDate}, #{weight})
+    </insert>
+</mapper>

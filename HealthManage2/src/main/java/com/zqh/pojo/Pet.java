@@ -1,6 +1,7 @@
 package com.zqh.pojo;  //宠物列表（还没进入查看详细）给静态提供
 
 import java.util.List;
+import com.zqh.pojo.WeightRecord;
 
 public class Pet {
     private Integer id;
@@ -9,10 +10,19 @@ public class Pet {
     private Integer petAge;       // 年龄
     private String petHealth; // 健康状态
     private List<PetVac> vacs; //疫苗记录
+    public List<WeightRecord> weightRecords;
+    public List<WeightRecord> getWeightRecords() {
+        return weightRecords;
+    }
+
+    public void setWeightRecords(List<WeightRecord> weightRecords) {
+        this.weightRecords = weightRecords;
+    }
 
     public List<PetVac> getVacs() {
         return vacs;
     }
+
 
     public void setVacs(List<PetVac> vacs) {
         this.vacs = vacs;

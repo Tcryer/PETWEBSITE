@@ -6,4 +6,13 @@
     <select id="selectPets" resultType="com.zqh.pojo.Pet">
         select id, petname, petage, petvar, pethea  from pet_info where id = #{id}
     </select>
+
+    <resultMap id="PetDetailMap" type="com.zqh.pojo.Pet">
+        <!-- 原有映射 -->
+        <collection property="weightRecords" ofType="com.zqh.pojo.WeightRecord">
+            <id property="id" column="wr_id"/>
+            <result property="recordDate" column="record_date"/>
+            <result property="weight" column="weight"/>
+        </collection>
+    </resultMap>
 </mapper>

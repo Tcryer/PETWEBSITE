@@ -10,6 +10,34 @@ public class PetInfo {
     protected String petBirthday;  //宠物生日
     protected String petHealth;  //宠物健康状况
     protected String petSex;  //宠物性别
+    private String adoptionDate;   // 到家日期
+    private String imageUrl;
+
+    public String getAdoptionDate() {
+        return adoptionDate;
+    }
+
+    public void setAdoptionDate(String adoptionDate) {
+        this.adoptionDate = adoptionDate;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public List<WeightRecord> getWeightRecords() {
+        return weightRecords;
+    }
+
+    public void setWeightRecords(List<WeightRecord> weightRecords) {
+        this.weightRecords = weightRecords;
+    }
+
+    private List<WeightRecord> weightRecords;
 
     private List<PetVac> petVacs;  //疫苗记录
     public Integer getId() {
@@ -75,6 +103,7 @@ public class PetInfo {
     public void setPetVacs(List<PetVac> petVacs) {
         this.petVacs = petVacs;
     }
+
     @Override
     public String toString() {
         return "PetInfo{" +
@@ -85,6 +114,9 @@ public class PetInfo {
                 ", petBirthday='" + petBirthday + '\'' +
                 ", petHealth='" + petHealth + '\'' +
                 ", petSex='" + petSex + '\'' +
+                ", adoptionDate='" + adoptionDate + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", weightRecords=" + weightRecords +
                 ", petVacs=" + petVacs +
                 '}';
     }

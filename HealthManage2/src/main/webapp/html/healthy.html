@@ -18,7 +18,7 @@
             <div class="wrapper">
                 <!-- logo -->
                 <div class="logo">
-                    <img src="D:\animalpro\pet-healthy\images\navigation\编组.png" alt="">
+                    <img src="/images/navigation/bianzu.png" alt="">
                     <h1>Pet Healthy</h1>
                 </div>
                 <!-- 导航 -->
@@ -26,7 +26,6 @@
                     <ul>
                         <li><a href="">首页</a></li>
                         <li><a href="">百科</a></li>
-                        <li><a href="">社区</a></li>
                         <li><a href="../html/index.html" class="active">健康管理</a></li>
                         <li><a href="../html/pet-adoption.html">爱心收养</a></li>
                     </ul>
@@ -44,12 +43,7 @@
                                     主页
                                 </a>
                             </li>
-                            <li>
-                                <a href="../html/healthy.html" class="box">
-                                    <span class="iconfont icon-chongwudangan"></span>
-                                    健康档案
-                                </a>
-                            </li>
+
                             <li>
                                 <a href="../html/online consultation.html">
                                     <span class="iconfont icon-chongwuwenzhen"></span>
@@ -65,21 +59,26 @@
                     <!--详情卡片  -->
                     <div class="file-card">
                         <div class="pet-detail-pic">
-                            <img src="../images/images2/柯基.png" alt="">
+                            <img id="petImage" src="../images/images2/柯基.png" alt="宠物头像">
                         </div>
                         <ul>
-                            <li>宠物名字：笨笨</li>
-                            <li>宠物品种：柯基</li>
-                            <li>宠物年龄：3岁</li>
-                            <li>生日：2025年1月1日</li>
-                            <li>到家日期：2025年2月1日</li>
+                            <li>宠物名字：<span id="petName">加载中...</span> </li>
+                            <li>宠物品种：<span id="petVarious">-</span> </li>
+                            <li>宠物年龄：<span id="petAge">-</span> </li>
+                            <li>生日：<span id="petBirthday">-</span> </li>
+                            <li>到家日期：<span id="adoptionDate">-</span> </li>
                         </ul>
 
                     </div>
 
                     <!-- 体重变化图 -->
-                    <div class="weight-container">
-
+                    <div class="pet-section">
+                        <div class="chart-container">
+                            <h2>宠物体重变化图</h2>
+                            <label for="date-picker">选择日期：</label>
+                            <input type="date" id="date-picker">
+                            <canvas id="weight-chart"></canvas>
+                        </div>
                     </div>
 
 
@@ -93,7 +92,8 @@
     </div>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
+    <script src="../js/weight-chart.js"></script>
 </body>
 
 </html>

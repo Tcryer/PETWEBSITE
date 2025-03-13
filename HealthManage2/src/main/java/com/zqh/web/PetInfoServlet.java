@@ -1,5 +1,6 @@
 package com.zqh.web;   //宠物信息的查看详情
 
+import com.google.gson.Gson;
 import com.zqh.pojo.PetInfo;
 import com.zqh.pojo.PetVac;
 import com.zqh.service.PetInfoService;
@@ -16,6 +17,9 @@ public class PetInfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws SecurityException, IOException{
         Integer InfoId = Integer.parseInt(request.getParameter("id"));
         PetInfo petInfo = new PetInfoService().getPetInfo(InfoId);
+
+        response.setContentType("application/json");
+        new Gson().toJson(petInfo, response.getWriter());
 
         //构造JSON
         response.setContentType("application/json");
