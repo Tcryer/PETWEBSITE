@@ -14,10 +14,10 @@ public class WeightRecordService {
 
     //获取宠物体重记录
     public List<WeightRecord> getWeightRecord(Integer petId){
-        try (SqlSession session = sqlSessionFactory.openSession()){
+        try (SqlSession session = sqlSessionFactory.openSession()) {
             WeightRecordMapper mapper = session.getMapper(WeightRecordMapper.class);
             return mapper.selectByPetId(petId);
-        he
+        }
     }
 
     //添加体重记录
