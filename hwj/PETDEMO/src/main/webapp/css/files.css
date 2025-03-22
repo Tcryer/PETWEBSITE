@@ -7,6 +7,10 @@
     height: 447px;
 }
 
+.pet-details-row {
+    position: relative !important;
+}
+
 .file-card li {
     padding-left: 68px;
     padding-top: 30px;
@@ -43,23 +47,48 @@
 }
 
 
+.pet-weight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin: 20px 20px 0 10px;
+    gap: 30px;
+
+}
+
+.btn-addweight {
+    margin: 10px 0 0 0;
+    background-color: rgb(220, 204, 188);
+    border-radius: none;
+}
+
+.btn-addweight:hover {
+    background-color: rgb(165, 152, 138);
+}
+
+.btn-addweight:active {
+    background-color: rgb(165, 152, 138);
+}
+
+.pet-weight h2 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-family: 'Alimama FangYuanTi', sans-serif;
+
+}
+
+
 .chart-container {
     width: 450px;
     height: 400px;
-    margin: 50px 0 0 0;
+    margin: 50px 0 0 -22px;
     background-color: #FBF4E2;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-
-
+    z-index: 0;
 }
 
-.chart-container h2 {
-    font-size: 24px;
-    font-family: 'Alimama FangYuanTi', sans-serif;
-    padding: 20px 0 0 10px;
-}
 
 .chart-container label {
     font-size: 16px;
@@ -74,6 +103,42 @@
     padding-top: 50px;
 }
 
+#weightModal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #c3b998;
+
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#weightModal h4 {
+    font-size: 26px;
+    font-family: 'Alimama FangYuanTi', sans-serif;
+}
+
+
+#weightOverlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+
+
+
+/* 疫苗 */
 .vaccine {
     width: 470px;
     height: 400px;
@@ -81,6 +146,151 @@
     background-color: #FBF4E2;
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    overflow-y: auto;
+
+}
+
+.vaccine h2 {
+    font-size: 24px;
+    font-family: 'Alimama FangYuanTi', sans-serif;
+    padding: 20px 0 0 10px;
+}
 
 
+
+#vaccineModal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #c3b998;
+
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add {
+    margin: 10px;
+    background-color: #B7F595;
+}
+
+.btn-add:hover {
+
+    background-color: #B7F595;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDCD7B;
+    height: 30px;
+    width: 60px;
+    border: none;
+
+}
+
+.btn-primary:hover {
+    background-color: #EDCD7B;
+
+}
+
+.btn-primary:active {
+    background-color: #ecb528 !important;
+}
+
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ED6D5F;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #ED6D5F;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    border: none;
+}
+
+.vaccineList {
+    padding: 10px;
+}
+
+#vaccineModal h4 {
+    font-size: 26px;
+    font-family: 'Alimama FangYuanTi', sans-serif;
+}
+
+.form-label {
+    font-size: 16px;
+    font-family: 'Alimama FangYuanTi', sans-serif;
+}
+
+#vaccineOverlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.healthy-test {
+    width: 960px;
+    height: 700px;
+    background-color: #FBF4E2;
+    margin-top: 20px;
+    border-radius: 30px;
+
+
+}
+
+
+
+.healthy-test h2 {
+    font-size: 24px;
+    font-family: 'Alimama FangYuanTi', sans-serif;
+    padding: 20px 0 0 30px;
+    margin: 0;
+
+}
+
+.tijian-pic h3 {
+    display: flex;
+    font-size: 15px;
+    margin: 0;
+    color: #7a7a7a;
+
+
+}
+
+
+.tijian-pic {
+    border: 2px dashed #9d9a9a;
+    padding: 10px;
+    min-height: 600px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 30px;
 }

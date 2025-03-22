@@ -19,7 +19,7 @@
       <div class="wrapper">
         <!-- logo -->
         <div class="logo">
-          <img src="/images/navigation/bianzu.png" alt="">
+          <img src="../images/navigation/bianzu.png" alt="">
           <h1>Pet Healthy</h1>
         </div>
         <!-- 导航 -->
@@ -45,12 +45,7 @@
                   主页
                 </a>
               </li>
-              <li>
-                <a href="../html/healthy.html">
-                  <span class="iconfont icon-chongwudangan"></span>
-                  健康档案
-                </a>
-              </li>
+
               <li>
                 <a href="../html/online consultation.html" class="box">
                   <span class="iconfont icon-chongwuwenzhen"></span>
@@ -71,9 +66,9 @@
               <li class="breadcrumb-item"><a href="../html/online consultation.html">线上问诊</a></li>
               <li class="breadcrumb-item active" aria-current="page">宠物医生详情</li>
             </ol>
-            <!-- 收藏/分享按钮在右 -->
+
             <div class="collect-share">
-              <button class="btn btn-outline-collect me-2" type="button">
+              <button id="toggleBtn" class="btn btn-outline-collect me-2" type="button">
                 <span class="iconfont icon-guanzhu-zhihui"></span>
                 收藏
               </button>
@@ -98,7 +93,7 @@
                 <li>专业：33333</li>
                 <li>联系电话：13058338562</li>
               </ul>
-              <button class="btn btn-outline-con" type="submit">
+              <button id="showdoctorModalBtn" class="btn btn-outline-con" type="submit">
                 <span class="iconfont icon-chongwuwenzhen"></span>
                 线上问诊
               </button>
@@ -107,19 +102,55 @@
 
 
           </div>
-
-
+          <div id="doctorOverlay"></div>
+          <div id="doctorModal">
+            <h4>线上问诊</h4>
+            <form id="consulationFormModal">
+              <div class="mb-3">
+                <label for="doctorName" class="form-label">医生名字：</label>
+                <input type="text" class="form-control" id="vaccineName">
+                <div class="mb-3">
+                  <label for="petType" class="form-label">宠物品种：</label>
+                  <input type="text" class="form-control" id="vaccineType">
+                </div>
+                <div class="mb-3">
+                  <label for="petDate" class="form-label">预约日期：</label>
+                  <input type="date" class="form-control" id="vaccineDate">
+                </div>
+                <div class="mb-3">
+                  <label for="doctornumber" class="form-label">账号：</label>
+                  <input type="text" class="form-control" id="vaccineType">
+                </div>
+                <div class="mb-3">
+                  <label for="petName" class="form-label">宠物姓名：</label>
+                  <input type="text" class="form-control" id="vaccineType">
+                </div>
+                <div class="mb-3">
+                  <label for="petcondition" class="form-label">症状描述：</label>
+                  <input type="text" class="form-control" id="vaccineType">
+                </div>
+                <div class="button-container">
+                  <button type="button" id="savedoctorBtn" class="btn btn-primary">提交</button>
+                  <button type="button" id="closeModalBtn" class="btn btn-secondary">取消</button>
+                </div>
+            </form>
+          </div>
         </div>
 
 
-
-
       </div>
-    </div><!-- row -->
+
+
+
+
+    </div>
+  </div><!-- row -->
   </div><!-- header -->
   </div><!-- container-fluid -->
 
   <!-- Bootstrap JS -->
+  <script src="../js/consulation.js"></script>
+  <script src="../js/iscollect.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="../css/bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
 </body>

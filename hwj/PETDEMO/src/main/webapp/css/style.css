@@ -392,3 +392,35 @@
 .healthy-details li:first-child {
     padding-top: 15px;
 }
+
+.btn-completed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+    margin-top: 5px;
+    background-color: #B7F595;
+    height: 45px;
+    width: 110px;
+    border: none;
+}
+
+.btn-completed:hover {
+    background-color: #B7F595;
+}
+
+.btn-uncompleted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+    margin-top: 5px;
+    background-color: #FF8066;
+    height: 45px;
+    width: 110px;
+    border: none;
+}
+
+.btn-uncompleted:hover {
+    background-color: #FF8066;
+}

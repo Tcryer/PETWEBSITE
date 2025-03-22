@@ -18,7 +18,7 @@
       <div class="wrapper">
         <!-- logo -->
         <div class="logo">
-          <img src="/images/navigation/bianzu.png" alt="">
+          <img src="../images/navigation/bianzu.png" alt="">
           <h1>Pet Healthy</h1>
         </div>
         <!-- 导航 -->
@@ -43,12 +43,7 @@
                   流浪宠物信息
                 </a>
               </li>
-              <li>
-                <a href="#">
-                  <span class="iconfont icon-chongwu"></span>
-                  我的宠物
-                </a>
-              </li>
+
 
             </ul>
           </div>
@@ -105,60 +100,26 @@
           <div class="pet-details-row row mt-3">
             <div class="adoption-details">
               <div class="adoption-detail-bac">
-                <img src="../images/images2/keji.jpg" alt="">
+                <img id="pet-image" src="../images/images2/keji.jpg" alt="">
               </div>
-              <h5 class="name">小布</h5>
+              <h5 class="name" id="pet-name"></h5>
               <div class="detail">
-                <p class="age">年龄：2</p>
-                <p class="gender">性别：公</p>
-                <p class="condition">已领养</p>
+                <p class="age" id="pet-age">年龄：</p>
+                <p class="gender" id="pet-gender">性别：</p>
+                <p class="condition" id="pet-condition"></p>
               </div>
               <div class="introduce">
-                <p>认识一下我，我是一只小柯基，我有点呆萌哦~</p>
+                <p id="pet-intro"></p>
               </div>
 
               <div class="confirm">
-                <button class="btn-confirm">确认领养</button>
+                <button id="ado-conf" class="btn-confirm">确认领养</button>
               </div>
             </div>
 
-            <div class="adoption-details">
-              <div class="adoption-detail-bac">
-                <img src="../images/images2/keji.jpg" alt="">
-              </div>
-              <h5 class="name">小布</h5>
-              <div class="detail">
-                <p class="age">年龄：2</p>
-                <p class="gender">性别：公</p>
-                <p class="condition">已领养</p>
-              </div>
-              <div class="introduce">
-                <p>认识一下我，我是一只小柯基，我有点呆萌哦~</p>
-              </div>
 
-              <div class="confirm">
-                <button class="btn-confirm">确认领养</button>
-              </div>
-            </div>
 
-            <div class="adoption-details">
-              <div class="adoption-detail-bac">
-                <img src="../images/images2/keji.jpg" alt="">
-              </div>
-              <h5 class="name">小布</h5>
-              <div class="detail">
-                <p class="age">年龄：2</p>
-                <p class="gender">性别：公</p>
-                <p class="condition">已领养</p>
-              </div>
-              <div class="introduce">
-                <p>认识一下我，我是一只小柯基，我有点呆萌哦~</p>
-              </div>
 
-              <div class="confirm">
-                <button class="btn-confirm">确认领养</button>
-              </div>
-            </div>
 
           </div>
 
@@ -175,7 +136,8 @@
   </div>
 
   </div>
-  <script src="/js/main.js"></script>
+  <script src="../js/adoption.js"></script>
+  <script src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="../css/bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
 </body>
