@@ -7,6 +7,24 @@ public class Pet {
     private String petGender;
     private String petState;
     private String petOutline;
+    private String petImg;
+    private String petType;
+
+    public String getPetType() {
+        return petType;
+    }
+
+    public void setPetType(String petType) {
+        this.petType = petType;
+    }
+
+    public String getPetImg() {
+        return petImg;
+    }
+
+    public void setPetImg(String petImg) {
+        this.petImg = petImg;
+    }
 
     public Integer getId() {
         return id;
@@ -65,6 +83,8 @@ public class Pet {
                 ", petGender='" + petGender + '\'' +
                 ", petState='" + petState + '\'' +
                 ", petOutline='" + petOutline + '\'' +
+                ", petImg='" + petImg + '\'' +
+                ", petType='" + petType + '\'' +
                 '}';
     }
 }
