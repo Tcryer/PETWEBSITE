@@ -88,17 +88,60 @@
                 <li><a class="dropdown-item" href="#">其他</a></li>
               </ul>
             </div>
-            <button type="button" class="btn btn-secondary ">
-              <span class="iconfont icon-icon-test"></span>
-              搜索
-            </button>
+            <div class="button-container">
+              <button type="button" class="btn btn-secondary ">
+                <span class="iconfont icon-icon-test"></span>
+                搜索
+              </button>
+              <button id="showadoptionBtn" class="btn btn-showadoption">
+                发布流浪宠物
+              </button>
+
+            </div>
+
+            <div id="adoptionOverlay"></div>
+            <div id="adoptionModal">
+
+              <form id="adoptionFormModal">
+                <h4>发布宠物</h4>
+                <div class="mb-3">
+                  <label for="petImageInput" class="form-label">宠物图片：</label>
+                  <input type="file" class="form-control" id="petImageInput" name="file">
+                </div>
+                <div class="mb-3">
+                  <label for="petName" class="form-label">宠物名字：</label>
+                  <input type="text" class="form-control" id="petName" name="petname">
+                </div>
+
+                <div class="mb-3">
+                  <label for="petType" class="form-label">宠物种类：</label>
+                  <input type="text" class="form-control" id="pettype" name="pettype">
+                </div>
+                <div class="mb-3">
+                  <label for="petage" class="form-label">宠物年龄：</label>
+                  <input type="text" class="form-control" id="petage" name="petage">
+                </div>
+                <div class="mb-3">
+                  <label for="petgender" class="form-label">性别：</label>
+                  <input type="text" class="form-control" id="petgender" name="petgender">
+                </div>
+                <div class="mb-3">
+                  <label for="petintro" class="form-label">简单介绍：</label>
+                  <input type="text" class="form-control" id="petoutline" name="petoutline" placeholder="可以介绍小动物的性格~">
+                </div>
+                <div class="button-container">
+                  <button type="button" id="saveadoptionBtn" class="btn btn-primary">添加</button>
+                  <button type="button" id="closeadoptionBtn" class="btn btn-secondary">取消</button>
+                </div>
+              </form>
+            </div>
 
 
           </div>
 
           <!-- 宠物区域  -->
           <div class="pet-details-row row mt-3">
-            <div class="adoption-details">
+            <div class="adoptiondetails">
               <div class="adoption-detail-bac">
                 <img id="pet-image" src="../images/images2/keji.jpg" alt="">
               </div>
@@ -115,6 +158,9 @@
               <div class="confirm">
                 <button id="ado-conf" class="btn-confirm">确认领养</button>
               </div>
+            </div>
+            <div id="adoptionList" class="pet-details-row row mt-3">
+              <!-- JS 会动态创建卡片并插入这里 -->
             </div>
 
 
@@ -136,6 +182,7 @@
   </div>
 
   </div>
+  <script src="../js/add-adoption.js"></script>
   <script src="../js/adoption.js"></script>
   <script src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
