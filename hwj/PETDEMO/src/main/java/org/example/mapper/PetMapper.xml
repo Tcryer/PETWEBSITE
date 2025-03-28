@@ -3,5 +3,13 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.example.mapper.PetMapper">
-
+    <resultMap id="petResultMap" type="org.example.pojo.Pet">
+        <id property="id" column="pet_id"/>
+        <result property="petName" column="pet_name"/>
+        <result property="petAge" column="pet_age"/>
+        <result property="petGender" column="pet_gender"/>
+        <result property="petOutline" column="pet_outline"/>
+        <result property="petImg" column="pet_img"/>
+        <result property="petType" column="pet_type"/>
+    </resultMap>
 </mapper>

@@ -96,7 +96,7 @@ public class AddServlet extends HttpServlet {
           pet.setPetGender(petgender);
           pet.setPetOutline(petoutline);
           pet.setPetImg(petImg);
-          pet.setPetType(petType);                    
+          pet.setPetType(petType);
 
           String resource = "mybatis-config.xml";
           InputStream inputStream = Resources.getResourceAsStream(resource);
