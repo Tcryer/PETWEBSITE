@@ -83,20 +83,20 @@ public class AddServlet extends HttpServlet {
           }
 
 
-
-          String petname = req.getParameter("petname");
-          String petage = req.getParameter("petage");
-          String petgender = req.getParameter("petgender");
-          String petoutline = req.getParameter("petoutline");
+          String petName = req.getParameter("petName");
+          String petAge = req.getParameter("petAge");
+          String petGender = req.getParameter("petGender");
+          String petOutline = req.getParameter("petOutline");
           String petImg = "https://petwebsite.oss-cn-guangzhou.aliyuncs.com/" + FOLDER_NAME + URLEncoder.encode(fileName, "UTF-8");
           String petType = req.getParameter("petType");
           Pet pet = new Pet();
-          pet.setPetName(petname);
-          pet.setPetAge(Integer.parseInt(petage));
-          pet.setPetGender(petgender);
-          pet.setPetOutline(petoutline);
+          pet.setPetName(petName);
+          pet.setPetAge(Integer.parseInt(petAge));
+          pet.setPetGender(petGender);
+          pet.setPetOutline(petOutline);
           pet.setPetImg(petImg);
           pet.setPetType(petType);
+
 
           String resource = "mybatis-config.xml";
           InputStream inputStream = Resources.getResourceAsStream(resource);
