@@ -89,6 +89,7 @@ public class AddServlet extends HttpServlet {
           String petOutline = req.getParameter("petOutline");
           String petImg = "https://petwebsite.oss-cn-guangzhou.aliyuncs.com/" + FOLDER_NAME + URLEncoder.encode(fileName, "UTF-8");
           String petType = req.getParameter("petType");
+          String petState = req.getParameter("petState");
           Pet pet = new Pet();
           pet.setPetName(petName);
           pet.setPetAge(Integer.parseInt(petAge));
@@ -96,7 +97,7 @@ public class AddServlet extends HttpServlet {
           pet.setPetOutline(petOutline);
           pet.setPetImg(petImg);
           pet.setPetType(petType);
-
+          pet.setPetState(petState);
 
           String resource = "mybatis-config.xml";
           InputStream inputStream = Resources.getResourceAsStream(resource);
