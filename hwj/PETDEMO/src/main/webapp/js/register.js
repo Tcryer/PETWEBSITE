@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     const createTime = new Date().getTime();
 
-    fetch("http://localhost:8080/api/register", {
+    fetch("http://localhost:8080/api/users/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -57,8 +57,8 @@
                 <!-- 具体详情 -->
                 <div class="col-12 col-md-8 left-shift">
                     <!--详情卡片  -->
-                    <div class="file-card">
-                        <div class="pet-detail-pic">
+                    <div class="filecard">
+                        <!-- <div class="pet-detail-pic">
                             <img src="../images/images2/柯基.png" alt="">
                         </div>
                         <ul>
@@ -67,7 +67,8 @@
                             <li>宠物年龄：3岁</li>
                             <li>生日：2025年1月1日</li>
                             <li>到家日期：2025年2月1日</li>
-                        </ul>
+                        </ul> -->
+                        <p>加载中，请稍候……</p>
 
                     </div>
 
@@ -132,16 +133,13 @@
                             <h4>新增疫苗接种记录</h4>
                             <form id="vaccineFormModal">
                                 <div class="mb-3">
-                                    <label for="vaccineName" class="form-label">疫苗名字：</label>
-                                    <input type="text" class="form-control" id="vaccineName" placeholder="如：二联疫苗">
+                                    <label for="vacName" class="form-label">疫苗名字：</label>
+                                    <input type="text" class="form-control" id="vacName" placeholder="如：二联疫苗">
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="vaccineType" class="form-label">疫苗种类：</label>
-                                    <input type="text" class="form-control" id="vaccineType" placeholder="如：狂犬疫苗">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="vaccineDate" class="form-label">接种日期：</label>
-                                    <input type="date" class="form-control" id="vaccineDate">
+                                    <label for="vacDate" class="form-label">接种日期：</label>
+                                    <input type="date" class="form-control" id="vacDate">
                                 </div>
                                 <div class="button-container">
                                     <button type="button" id="saveVaccineBtn" class="btn btn-primary">添加</button>
@@ -177,7 +175,7 @@
 
 
 
-
+    <script src="../js/healthy.js"></script>
     <script src="../js/addweight.js"></script>
     <script src="../js/vaccine.js"></script>
     <script src="../js/tijian-pic.js"></script>

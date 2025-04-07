@@ -21,154 +21,122 @@
                     <h1>Pet Healthy</h1>
                 </div>
                 <!-- 导航 -->
-                <div class="nav">
-                    <ul>
-                        <li><a href="">首页</a></li>
-                        <li><a href="">百科</a></li>
-                        <li><a href="../html/index.html" class="active">健康管理</a></li>
-                        <li><a href="../html/pet-adoption.html">爱心收养</a></li>
+                <div class="nav-bar">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li><a href="">百科</a></li>
+                            <li><a href="../html/index.html" class="active">健康管理</a></li>
+                            <li><a href="../html/pet-adoption.html">爱心收养</a></li>
 
-                    </ul>
+                        </ul>
+                    </div>
                     <div class="nav-login">
                         <ul>
                             <li id="nav-login">
                                 <a href="./login.html">登录</a> 或 <a href="./register.html">注册</a>
                             </li>
+                            <li id="user-info" style="display: none;">
+                                <img src="../images/images2/柯基.jpg" alt="头像">
+                                <span id="username-display" style="margin: 0 8px;"></span>
+                                <button id="logout-btn" class="btn btn-sm btn-danger">退出</button>
+                            </li>
                         </ul>
                     </div>
 
+                </div>
 
 
+
+            </div>
+        </div>
+        <!--侧边导航 -->
+        <div class="row">
+            <div class="col-12 col-md-3 offset-md-1">
+                <div class="left-nav">
+                    <ul>
+                        <li>
+                            <a href="../html/index.html" class="box">
+                                <span class="iconfont icon-chongwushouye"></span>
+                                主页
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../html/online consultation.html">
+                                <span class="iconfont icon-chongwuwenzhen"></span>
+                                线上问诊
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!--侧边导航 -->
-            <div class="row">
-                <div class="col-12 col-md-3 offset-md-1">
-                    <div class="left-nav">
-                        <ul>
-                            <li>
-                                <a href="../html/index.html" class="box">
-                                    <span class="iconfont icon-chongwushouye"></span>
-                                    主页
-                                </a>
-                            </li>
 
-                            <li>
-                                <a href="../html/online consultation.html">
-                                    <span class="iconfont icon-chongwuwenzhen"></span>
-                                    线上问诊
-                                </a>
-                            </li>
-                        </ul>
+            <!-- 轮播图 -->
+            <div class="col-12 col-md-8 left-shift ">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-images">
+                            <div class="carousel-img"><img src="../images/navigation/img1.jpg" alt=""></div>
+                            <div class="carousel-img"><img src="../images/navigation/img2.jpg" alt=""></div>
+                            <div class="carousel-img"><img src="../images/navigation/img3.jpg" alt=""></div>
+                            <div class="carousel-img"><img src="../images/navigation/img4.jpg" alt=""></div>
+                            <div class="carousel-img"><img src="../images/navigation/img5.jpg" alt=""></div>
+                        </div>
+                        <div class="carousel-controls">
+                            <div class="carousel-left">&lt;</div>
+                            <div class="carousel-right">&gt;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pet-section">
+                    <div class="pet-content">
+
+                        <span class="iconfont icon-xiedaichongwu"></span>
+                        <h3 class="pet-title">我的宠物</h3>
                     </div>
                 </div>
 
-                <!-- 轮播图 -->
-                <div class="col-12 col-md-8 left-shift ">
-                    <div class="carousel-container">
-                        <div class="carousel">
-                            <div class="carousel-images">
-                                <div class="carousel-img"><img src="../images/navigation/img1.jpg" alt=""></div>
-                                <div class="carousel-img"><img src="../images/navigation/img2.jpg" alt=""></div>
-                                <div class="carousel-img"><img src="../images/navigation/img3.jpg" alt=""></div>
-                                <div class="carousel-img"><img src="../images/navigation/img4.jpg" alt=""></div>
-                                <div class="carousel-img"><img src="../images/navigation/img5.jpg" alt=""></div>
-                            </div>
-                            <div class="carousel-controls">
-                                <div class="carousel-left">&lt;</div>
-                                <div class="carousel-right">&gt;</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pet-section">
-                        <div class="pet-content">
+                <!-- 宠物详情区域 详情+ 健康提醒 并排-->
+                <div class="pet-details-row row mt-3">
+                    <!-- 左侧：宠物详情卡片 -->
+                    <div class="col-12 col-lg-8">
+                        <div class="pet-details">
+                            <div class="pet-detail">
+                                <div class="details-group">
+                                    <!-- 两个 details 卡片 -->
 
-                            <span class="iconfont icon-xiedaichongwu"></span>
-                            <h3 class="pet-title">我的宠物</h3>
-                        </div>
-                    </div>
 
-                    <!-- 宠物详情区域 详情+ 健康提醒 并排-->
-                    <div class="pet-details-row row mt-3">
-                        <!-- 左侧：宠物详情卡片 -->
-                        <div class="col-12 col-lg-8">
-                            <div class="pet-details">
-                                <div class="pet-detail">
-                                    <div class="details-group">
-                                        <!-- 两个 details 卡片 -->
-                                        <div class="details">
-                                            <!-- 第一个卡片内容 -->
-                                            <div class="details-left">
-                                                <div class="details-bac">
-                                                    <img src="../images/images2/狗2.png" alt="">
-                                                </div>
-                                                <ul>
-                                                    <li>宠物名字：笨笨</li>
-                                                    <li>宠物品种：柯基</li>
-                                                    <li>宠物年龄：3岁</li>
-                                                    <li>健康状态：良好</li>
-                                                </ul>
-                                                <a href="../html/healthy.html"
-                                                    style="position: relative; z-index: 9999; pointer-events: auto;">
-                                                    <button class="check">查看详情</button>
-                                                </a>
 
-                                            </div>
-                                            <div class="details-right">
-                                                <img src="../images/images2/keji.jpg" alt="">
-                                                <p>宠物头像</p>
-                                            </div>
-                                        </div>
-                                        <div class="details">
-                                            <!-- 第二个卡片内容 -->
-                                            <div class="details-left">
-                                                <div class="details-bac">
-                                                    <img src="../images/images2/狗2.png" alt="">
-                                                </div>
-                                                <ul>
-                                                    <li>宠物名字：笨笨</li>
-                                                    <li>宠物品种：柯基</li>
-                                                    <li>宠物年龄：3岁</li>
-                                                    <li>健康状态：良好</li>
-                                                </ul>
-                                                <a href="../html/healthy.html"
-                                                    style="position: relative; z-index: 9999; pointer-events: auto;">
-                                                    <button class="check">查看详情</button>
-                                                </a>
 
-                                            </div>
-                                            <div class="details-right">
-                                                <img src="../images/images2/keji.jpg" alt="">
-                                                <p>宠物头像</p>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="healthy-reminber">
-                                <div class="healthy-content">
-                                    <img src="../images/images2/提醒.png" alt="">
-                                    <span>
-                                        <h3 class="pet-title">健康提醒</h3>
-                                    </span>
-                                </div>
-                                <div class="healthy-details">
-                                    <ul>
-                                        <li>宠物名字：笨笨</li>
-                                        <li>接种疫苗：狂犬疫苗</li>
-                                        <li>接种时间：2025年1月2日</li>
-                                    </ul>
-                                    <button id="toggleBtn" class="btn btn-completed">标记已完成</button>
-                                </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="healthy-reminber">
+                            <div class="healthy-content">
+                                <img src="../images/images2/提醒.png" alt="">
+                                <span>
+                                    <h3 class="pet-title">健康提醒</h3>
+                                </span>
+                            </div>
+
+                            <!-- 新建卡片放这 -->
+                            <div class="healthy-detail">
+
+
+
+
 
                             </div>
 
+
                         </div>
 
-
                     </div>
+
 
                 </div>
 
@@ -177,6 +145,9 @@
         </div>
 
     </div>
+
+    </div>
+    <script src="../js/mypet.js" defer></script>
     <script src="../js/checklogin.js"></script>
     <script src="../js/btn-completed.js"></script>
     <script src="../js/main.js"></script>

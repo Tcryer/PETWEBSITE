@@ -68,9 +68,9 @@
             </ol>
 
             <div class="collect-share">
-              <button id="toggleBtn" class="btn btn-outline-collect me-2" type="button">
+              <button id="toggleBtn" class="btn btn-outline-collect" type="button">
                 <span class="iconfont icon-guanzhu-zhihui"></span>
-                收藏
+                <span id="buttonText">收藏</span> (<span id="likeCount">0</span>)
               </button>
               <button class="btn btn-outline-share" type="button">
                 <span class="iconfont icon-a-fenxiang2"></span>
@@ -87,11 +87,12 @@
 
             <div class="doctor-detail">
               <ul>
-                <li>医生姓名：笨笨</li>
-                <li>性别：女</li>
-                <li>年龄：27</li>
-                <li>专业：33333</li>
-                <li>联系电话：13058338562</li>
+                <li>医生姓名：<span id="doctorName"></span></li>
+                <li>医生编号：<span id="doctorCode"></span></li>
+                <li>地区：<span id="doctorRegion"></span></li>
+                <li>擅长领域：<span id="doctorSpecialty"></span></li>
+
+                <li>医生简介：<span id="doctorProfile"></span></li>
               </ul>
               <button id="showdoctorModalBtn" class="btn btn-outline-con" type="submit">
                 <span class="iconfont icon-chongwuwenzhen"></span>
@@ -107,32 +108,22 @@
             <h4>线上问诊</h4>
             <form id="consulationFormModal">
               <div class="mb-3">
-                <label for="doctorName" class="form-label">医生名字：</label>
-                <input type="text" class="form-control" id="vaccineName">
-                <div class="mb-3">
-                  <label for="petType" class="form-label">宠物品种：</label>
-                  <input type="text" class="form-control" id="vaccineType">
-                </div>
-                <div class="mb-3">
-                  <label for="petDate" class="form-label">预约日期：</label>
-                  <input type="date" class="form-control" id="vaccineDate">
-                </div>
-                <div class="mb-3">
-                  <label for="doctornumber" class="form-label">账号：</label>
-                  <input type="text" class="form-control" id="vaccineType">
-                </div>
-                <div class="mb-3">
-                  <label for="petName" class="form-label">宠物姓名：</label>
-                  <input type="text" class="form-control" id="vaccineType">
-                </div>
-                <div class="mb-3">
-                  <label for="petcondition" class="form-label">症状描述：</label>
-                  <input type="text" class="form-control" id="vaccineType">
-                </div>
-                <div class="button-container">
-                  <button type="button" id="savedoctorBtn" class="btn btn-primary">提交</button>
-                  <button type="button" id="closeModalBtn" class="btn btn-secondary">取消</button>
-                </div>
+                <h5>医生编号：</h5>
+                <input class="form-control me-2" type="number" name="doctorId" placeholder="请输入医生编号" aria-label="医生编号">
+
+                <h5>宠物名称：</h5>
+                <input class="form-control me-2" type="text" name="petName" placeholder="请输入宠物名称" aria-label="宠物名称">
+
+                <h5>宠物年龄：</h5>
+                <input class="form-control me-2" type="number" name="petAge" placeholder="请输入宠物年龄" aria-label="宠物年龄">
+
+                <h5>症状描述：</h5>
+                <textarea class="form-control me-2" name="symptoms" placeholder="请输入症状描述" aria-label="症状描述"></textarea>
+
+                <button class="btn btn-outline-success" type="submit">
+                  <span class="iconfont icon-icon-test"></span>
+                  提交问诊
+                </button>
             </form>
           </div>
         </div>
@@ -148,9 +139,10 @@
   </div><!-- header -->
   </div><!-- container-fluid -->
 
-  <!-- Bootstrap JS -->
+
   <script src="../js/consulation.js"></script>
-  <script src="../js/iscollect.js"></script>
+  <script src="../js/doctor-detail.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="../css/bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
 </body>

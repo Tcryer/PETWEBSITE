@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Alimama FangYuanTi';
+  src: url('../fonts/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF-Thin.woff2') format('woff2'),
+    url('../fonts/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF-Thin.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +44,7 @@ body {
   width: 480px;
   height: 356px;
   /* background: red; */
-  background: #FBF4E2;
+  background: #FDE9B1;
   position: absolute;
   top: calc(50% - 178px);
   left: calc(50% - 240px);
@@ -83,6 +92,8 @@ h2 {
   width: 160px;
   padding-bottom: 4px;
   margin: 8px auto;
+
+  font-family: 'Alimama FangYuanTi', sans-serif;
 }
 
 #btn {

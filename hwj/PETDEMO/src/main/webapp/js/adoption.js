@@ -1,11 +1,13 @@
-// 加载时渲染宠物列表（直接调用API）
+
 window.addEventListener('DOMContentLoaded', () => {
   loadPets(); // 初始化加载全部宠物
 });
 
-// 定义加载宠物列表函数（支持搜索）
+// 定义加载宠物列表函数 可搜索
 function loadPets(type = '全部') {
-  let apiUrl = 'http://localhost:8080/GetPetList';
+
+  //  这个api地址可能有问题 可能给不全 可复制下面地址 到谷歌看看能不能显示json数据 不能就是地址有问题
+  let apiUrl = 'http://localhost:8080/selectAllServlet';
   if (type !== '全部') {
     apiUrl = `http://localhost:8080/SearchPet?type=${encodeURIComponent(type)}`;
   }
@@ -36,16 +38,18 @@ function createPetCard(pet) {
   card.innerHTML = `
     <div class="adoption-details">
       <div class="adoption-detail-bac">
-        <img src="${pet.imageUrl}" alt="${pet.name}">
+        <img src="${pet.petImg}" alt="${pet.petName}">
       </div>
-      <h5 class="name">${pet.name}</h5>
+      <h5 class="name">${pet.petName}</h5>
       <div class="detail">
-        <p class="age">年龄：${pet.age}</p>
-        <p class="gender">性别：${pet.gender}</p>
+        <p class="age">年龄：${pet.petAge}</p>
+        <p class="type">种类：${pet.petType}</p>
+        <p class="gender">性别：${pet.petGender}</p>
+        <p class="state">健康状态：${pet.petState}</p>
         <p class="condition">待领养</p>
       </div>
       <div class="introduce">
-        <p>${pet.outline}</p>
+        <p>${pet.petOutline}</p>
       </div>
       <!-- 仅展示按钮，无功能 -->
       <div class="confirm">
@@ -63,7 +67,7 @@ document.getElementById("searchBtn").addEventListener("click", () => {
   loadPets(selectedType); // 重新加载对应类型的宠物
 });
 
-// 下拉菜单选项点击事件（Bootstrap会自动处理激活状态）
+
 document.querySelectorAll(".dropdown-item").forEach(item => {
   item.addEventListener("click", (e) => {
     e.preventDefault();

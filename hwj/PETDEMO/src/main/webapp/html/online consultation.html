@@ -71,62 +71,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pet-section">
-                        <div class="pet-section">
-                            <div class="pet-content">
-                                <div class="pet-doctor-left">
-                                    <span class="iconfont icon-chongwuyiliao"></span>
-                                    <h3 class="pet-title">宠物医生</h3>
+
+                    <!-- 宠物医生搜索 -->
+                    <div class="pet-section1">
+                        <div class="pet-doctor-left">
+                            <span class="iconfont icon-chongwuyiliao"></span>
+                            <h3 class="pet-title">宠物医生</h3>
+                        </div>
+
+                        <div class="online-search">
+                            <div class="location">
+                                <h4>您现在所在位置</h4>
+
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        请选择
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">佛山市</a></li>
+                                        <li><a class="dropdown-item">广州市</a></li>
+                                        <li><a class="dropdown-item">深圳市</a></li>
+                                    </ul>
                                 </div>
-
-
-                                <div class="online-search">
-
-                                    <!-- 您现在所在位置 -->
-                                    <div class="location">
-                                        <h4>您现在所在位置</h4>
-
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                请选择
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">佛山市</a></li>
-                                                <li><a class="dropdown-item" href="#">广州市</a></li>
-                                                <li><a class="dropdown-item" href="#">深圳市</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- 医生搜索 -->
-                                    <div class="doctor-search">
-                                        <form class="d-flex" role="search">
-                                            <h5>医生编号：</h5>
-                                            <input class="form-control me-2" type="search" placeholder="请输入"
-                                                aria-label="请输入">
-                                            <h5>医生姓名：</h5>
-                                            <input class="form-control me-2" type="search" placeholder="请输入"
-                                                aria-label="请输入">
-                                            <button class="btn btn-outline-success" type="submit">
-                                                <span class="iconfont icon-icon-test"></span>
-                                                搜索
-                                            </button>
-                                        </form>
-                                    </div>
-
-
-                                </div>
-
 
                             </div>
                         </div>
+
+                    </div>
+
+
+                    <div class="pet-section2">
+                        <div class="doctor-search">
+                            <form class="d-flex" role="search">
+                                <h5>医生编号：</h5>
+                                <input class="form-control me-2" type="search" placeholder="请输入" aria-label="请输入">
+                                <h5>医生姓名：</h5>
+                                <input class="form-control me-2" type="search" placeholder="请输入" aria-label="请输入">
+                                <button class="btn btn-outline-success" type="submit">
+                                    <span class="iconfont icon-icon-test"></span>
+                                    搜索
+                                </button>
+                            </form>
+                        </div>
+
                     </div>
 
                     <!-- 宠物详情区域 详情+ 健康提醒 并排-->
                     <div class="pet-details-row row mt-3">
-                        <div class="doctor-details">
+
+                        <!-- <div class="doctor-details">
                             <a href="../html/online-doctor-detail.html">
                                 <div class="doctor-detail-bac">
                                     <img src="../images/images2/docter1.jpg" alt="">
@@ -153,7 +147,7 @@
                                 </div>
                                 <h5 class="name">医生编号</h5>
                             </a>
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -165,6 +159,7 @@
         </div>
 
     </div>
+    <script src="../js/doctor.js"></script>
     <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="../css/bootstrap-5.3.0-alpha1-dist/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>

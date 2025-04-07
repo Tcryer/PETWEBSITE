@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded", function () {
       return;
     }
     // 使用 fetch 发送 POST 请求
-    fetch("http://localhost:8080/api/login", {
+    fetch("http://localhost:8080/api/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -26,10 +26,10 @@ window.addEventListener("DOMContentLoaded", function () {
           alertDiv.innerHTML = data.message;
           alertDiv.style.display = "block";
 
-          // 模拟成功登录
-          alertDiv.className = "alert-success";
-          alertDiv.innerHTML = "登录成功";
-          alertDiv.style.display = "block";
+          //模拟成功登录
+          // alertDiv.className = "alert-success";
+          // alertDiv.innerHTML = "登录成功";
+          // alertDiv.style.display = "block";
 
           // 保存登录状态（例如 token 或用户名）
           localStorage.setItem("username", username);

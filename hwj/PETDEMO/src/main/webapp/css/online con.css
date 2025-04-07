@@ -1,7 +1,21 @@
-.pet-section {
+.pet-section1 {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  justify-content: space-between;
+
+
+  margin-top: 20px;
+
+}
+
+.pet-section2 {
+  width: 500px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.dropdown {
+  margin-right: 30px;
 }
 
 .pet-doctor-left {
@@ -10,18 +24,9 @@
   gap: 5px;
 }
 
-.pet-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .online-search {
   gap: 8px;
-
   height: 40px;
-
   margin: 0;
   max-width: 960px;
   display: flex;
@@ -98,8 +103,9 @@
 .pet-details-row {
 
   max-width: 960px;
+  margin-top: 20px !important;
 
-  margin-top: 70px !important;
+
 
 }
 

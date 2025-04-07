@@ -83,13 +83,13 @@
                 请选择
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">流浪狗</a></li>
-                <li><a class="dropdown-item" href="#">流浪猫</a></li>
-                <li><a class="dropdown-item" href="#">其他</a></li>
+                <li><a class="dropdown-item">公</a></li>
+                <li><a class="dropdown-item">母</a></li>
+
               </ul>
             </div>
             <div class="button-container">
-              <button type="button" class="btn btn-secondary ">
+              <button type="button" class="btn btn-secondary " id="searchBtn">
                 <span class="iconfont icon-icon-test"></span>
                 搜索
               </button>
@@ -105,29 +105,33 @@
               <form id="adoptionFormModal">
                 <h4>发布宠物</h4>
                 <div class="mb-3">
-                  <label for="petImageInput" class="form-label">宠物图片：</label>
-                  <input type="file" class="form-control" id="petImageInput" name="file">
+                  <label for="petImg" class="form-label">宠物图片：</label>
+                  <input type="file" class="form-control" id="petImg" name="file">
                 </div>
                 <div class="mb-3">
                   <label for="petName" class="form-label">宠物名字：</label>
-                  <input type="text" class="form-control" id="petName" name="petname">
+                  <input type="text" class="form-control" id="petName" name="petName">
                 </div>
 
                 <div class="mb-3">
                   <label for="petType" class="form-label">宠物种类：</label>
-                  <input type="text" class="form-control" id="pettype" name="pettype">
+                  <input type="text" class="form-control" id="petType" name="petType">
                 </div>
                 <div class="mb-3">
-                  <label for="petage" class="form-label">宠物年龄：</label>
-                  <input type="text" class="form-control" id="petage" name="petage">
+                  <label for="petAge" class="form-label">宠物年龄：</label>
+                  <input type="text" class="form-control" id="petAge" name="petAge">
                 </div>
                 <div class="mb-3">
-                  <label for="petgender" class="form-label">性别：</label>
-                  <input type="text" class="form-control" id="petgender" name="petgender">
+                  <label for="petState" class="form-label">健康状态：</label>
+                  <input type="text" class="form-control" id="petState" name="petState">
                 </div>
                 <div class="mb-3">
-                  <label for="petintro" class="form-label">简单介绍：</label>
-                  <input type="text" class="form-control" id="petoutline" name="petoutline" placeholder="可以介绍小动物的性格~">
+                  <label for="petGender" class="form-label">性别：</label>
+                  <input type="text" class="form-control" id="petGender" name="petGender">
+                </div>
+                <div class="mb-3">
+                  <label for="petOutline" class="form-label">简单介绍：</label>
+                  <input type="text" class="form-control" id="petOutline" name="petOutline" placeholder="可以介绍小动物的性格~">
                 </div>
                 <div class="button-container">
                   <button type="button" id="saveadoptionBtn" class="btn btn-primary">添加</button>
@@ -141,31 +145,76 @@
 
           <!-- 宠物区域  -->
           <div class="pet-details-row row mt-3">
-            <div class="adoptiondetails">
+
+            <div class="adoption-details">
+
               <div class="adoption-detail-bac">
-                <img id="pet-image" src="../images/images2/keji.jpg" alt="">
+                <img src="../images/images2/博美.jpg" alt="${pet.petName}">
               </div>
-              <h5 class="name" id="pet-name"></h5>
+              <h5 class="name">笨笨</h5>
               <div class="detail">
-                <p class="age" id="pet-age">年龄：</p>
-                <p class="gender" id="pet-gender">性别：</p>
-                <p class="condition" id="pet-condition"></p>
+                <p class="age">年龄：3</p>
+                <p class="type">种类：柯基</p>
+                <p class="gender">性别：公</p>
+                <p class="state">健康状态：健康</p>
+                <p class="condition">待领养</p>
               </div>
               <div class="introduce">
-                <p id="pet-intro"></p>
+                <p>是你的本事五百系是不被九比空难后你的文笔清新比科比</p>
               </div>
-
+              <!-- 仅展示按钮，无功能 -->
               <div class="confirm">
-                <button id="ado-conf" class="btn-confirm">确认领养</button>
+                <button class="btn-confirm" disabled>确认领养</button>
               </div>
             </div>
-            <div id="adoptionList" class="pet-details-row row mt-3">
-              <!-- JS 会动态创建卡片并插入这里 -->
+
+
+            <div class="adoption-details">
+
+              <div class="adoption-detail-bac">
+                <img src="../images/images2/博美.jpg" alt="${pet.petName}">
+              </div>
+              <h5 class="name">笨笨</h5>
+              <div class="detail">
+                <p class="age">年龄：3</p>
+                <p class="type">种类：柯基</p>
+                <p class="gender">性别：公</p>
+                <p class="state">健康状态：健康</p>
+                <p class="condition">待领养</p>
+              </div>
+              <div class="introduce">
+                <p>是你的本事五百系是不被九比空难后你的文笔清新比科比</p>
+              </div>
+              <!-- 仅展示按钮，无功能 -->
+              <div class="confirm">
+                <button class="btn-confirm" disabled>确认领养</button>
+              </div>
             </div>
 
 
 
 
+            <div class="adoption-details">
+
+              <div class="adoption-detail-bac">
+                <img src="../images/images2/博美.jpg" alt="${pet.petName}">
+              </div>
+              <h5 class="name">笨笨</h5>
+              <div class="detail">
+                <p class="age">年龄：3</p>
+                <p class="type">种类：柯基</p>
+                <p class="gender">性别：公</p>
+                <p class="state">健康状态：健康</p>
+                <p class="condition">待领养</p>
+              </div>
+              <div class="introduce">
+                <p>是你的本事五百系是不被九比空难后你的文笔清新比科比</p>
+              </div>
+              <!-- 仅展示按钮，无功能 -->
+              <div class="confirm">
+                <button class="btn-confirm" disabled>确认领养</button>
+              </div>
+            </div>
 
           </div>
 
@@ -175,9 +224,15 @@
 
         </div>
 
+
+
+
+
       </div>
 
     </div>
+
+  </div>
 
   </div>
 

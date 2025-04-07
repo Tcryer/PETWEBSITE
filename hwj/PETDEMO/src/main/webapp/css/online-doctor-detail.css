@@ -25,23 +25,23 @@
 
 .btn-outline-collect {
   background-color: #F36D6D;
-  width: 100px;
+  width: 120px;
 }
 
 .btn-outline-collect:hover {
   background-color: #F36D6D;
-  width: 100px;
+  width: 120px;
 
 }
 
 .btn-outline-alreadycollect {
   background-color: #f05a5a;
-  width: 100px;
+  width: 120px;
 }
 
 .btn-outline-alreadycollect:hover {
   background-color: #f05a5a;
-  width: 100px;
+  width: 120px;
 }
 
 .btn-outline-share {

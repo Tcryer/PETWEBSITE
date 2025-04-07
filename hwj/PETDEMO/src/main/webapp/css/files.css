@@ -11,25 +11,44 @@
     position: relative !important;
 }
 
-.file-card li {
-    padding-left: 68px;
-    padding-top: 30px;
+.filecard-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.pet-text-info {
+    flex: 1;
+}
+
+.pet-text-info ul {
     list-style: none;
-    font-size: 22px;
+    padding-left: 40px;
+}
+
+.pet-text-info li {
+    font-size: 20px;
     font-weight: bold;
+    padding: 10px 0;
 }
 
-.file-card li:first-child {
-    padding-top: 32px;
+.pet-detail-pic {
+    flex-shrink: 0;
+    margin-right: 30px;
 }
 
-.file-card li:last-child {
-    padding-bottom: 20px;
+.pet-detail-pic img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #fff;
 }
 
-.file-card {
+.filecard {
     width: 960px;
-    height: 349px;
+    height: 360px;
     border-radius: 30px;
     background-image: url('../fonts/wave-haikei.svg');
     background-size: cover;

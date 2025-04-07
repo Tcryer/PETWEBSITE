@@ -247,7 +247,7 @@
     align-items: flex-start;
     gap: 20px;
     flex-wrap: wrap;
-    /* 允许换行 */
+
 }
 
 @media (max-width: 768px) {
@@ -423,4 +423,59 @@
 
 .btn-uncompleted:hover {
     background-color: #FF8066;
+}
+
+.text-danger {
+    color: #9e9b9b !important;
+    font-size: 18px;
+}
+
+.nav-login img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    /* 垂直居中对齐 */
+    gap: 30px;
+    /* 两边留一点空隙 */
+
+
+}
+
+.nav-login {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    margin-top: -15px;
+
+}
+
+
+.nav-login ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 去掉下划线 + 设置默认灰色字体 */
+.nav-login a {
+    text-decoration: none;
+    color: #525050;
+    font-size: 16px;
+}
+
+/* 悬停时字体变白，无背景、无阴影 */
+.nav-login a:hover {
+    color: rgb(88, 86, 86);
+    background: none;
+    box-shadow: none;
 }

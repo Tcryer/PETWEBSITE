@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Alimama FangYuanTi';
+  src: url('../fonts/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF-Thin.woff2') format('woff2'),
+    url('../fonts/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF/AlimamaFangYuanTiVF-Thin.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,6 +91,8 @@ h2 {
   border-bottom: 3px solid #ffffff;
   width: 100px;
   margin: 8px auto;
+
+  font-family: 'Alimama FangYuanTi', sans-serif;
 }
 
 #btn {
