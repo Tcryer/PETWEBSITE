@@ -176,9 +176,6 @@
 .detail {
   display: flex;
   text-align: center;
-
-
-
   flex-wrap: wrap;
   gap: 3px;
   /* 保证 p 元素整体垂直居中 */
